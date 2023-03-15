@@ -1,0 +1,50 @@
+{
+  "version": "0.0.1",
+  "name": "@alipay/antg-asset-tools",
+  "description": "antg asset tools",
+  "type": "module",
+  "main": "dist/main.js",
+  "module": "dist/module.esm.js",
+  "types": "types/index.d.ts",
+  "author": {
+    "name": "Hu Song",
+    "email": "gz65555@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "docs": "typedoc src/index.ts --plugin typedoc-plugin-markdown --excludePrivate --out ./docs",
+    "build": "rm -rf types && rm -rf dist && tsc && rollup -c"
+  },
+  "keywords": [
+    "gltf",
+    "glb",
+    "oasis",
+    "webgl",
+    "webgl2",
+    "webgpu"
+  ],
+  "files": [
+    "types",
+    "dist"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@swc/core": "^1.3.35",
+    "prettier": "^2.3.1",
+    "rollup": "^3",
+    "rollup-plugin-swc3": "^0.8.0",
+    "typescript": "^4",
+    "vite": "^4"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "^3.1.1",
+    "@gltf-transform/extensions": "^3.1.1",
+    "@gltf-transform/functions": "^3.1.1",
+    "@oasis-engine-toolkit/controls": "1.0.0-alpha.15",
+    "@swc/helpers": "^0.4.14",
+    "oasis-engine": "^0.9.0-beta.68",
+    "typedoc": "^0.23.26",
+    "typedoc-plugin-markdown": "^3.14.0"
+  }
+}
