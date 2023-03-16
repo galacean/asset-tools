@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
-  "name": "@alipay/antg-asset-tools",
+  "name": "@oasis-engine/asset-tools",
   "description": "antg asset tools",
   "type": "module",
   "main": "dist/main.js",
@@ -19,10 +19,9 @@
   "keywords": [
     "gltf",
     "glb",
-    "oasis",
     "webgl",
     "webgl2",
-    "webgpu"
+    "oasis-engine"
   ],
   "files": [
     "types",
