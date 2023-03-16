@@ -14,7 +14,7 @@ Use `oasis-engine` as an external library: https://gw.alipayobjects.com/os/lib/o
 Import:
 ```javascript
 import { transformGlTFtoGlB, GlTFViewer } from '@alipay/antg-asset-tools';
-````
+```
 
 Usage:
 
