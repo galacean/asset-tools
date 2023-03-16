@@ -1,5 +1,5 @@
-import { GlTFPreview } from "../src";
-import { transformGlTFtoGlB } from "../src";
+import { GlTFPreview } from "@oasis-engine/asset-tools";
+import { transformGlTFtoGlB } from "@oasis-engine/asset-tools";
 
 const json = await fetch("/model/duck.gltf").then((res) => res.json());
 const resources: Record<string, Uint8Array> = {};
