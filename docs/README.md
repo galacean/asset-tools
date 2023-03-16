@@ -1,4 +1,4 @@
-@alipay/antg-asset-tools / [Exports](modules.md)
+@oasis-engine/asset-tools / [Exports](modules.md)
 
 # Antg Asset Tools
 
@@ -10,14 +10,13 @@ Install:
 tnpm install --save @alipay/antg-asset-tools
 ```
 
-Use `oasis-engine` as an external library: 
-https://gw.alipayobjects.com/os/lib/oasis-engine/0.9.0-beta.68/dist/browser.min.js
+Use `oasis-engine` as an external library: https://gw.alipayobjects.com/os/lib/oasis-engine/0.9.0-beta.68/dist/browser.min.js
 
-````
 Import:
+
 ```javascript
 import { transformGlTFtoGlB, GlTFViewer } from '@alipay/antg-asset-tools';
-````
+```
 
 Usage:
 
@@ -47,7 +46,7 @@ const glTFPreview = GlTFPreview.getInstance();
 
 document.getElementById("container")!.appendChild(glTFPreview.canvas);
 
-await glTFPreview.loadAsset(glbBlob);
+await glTFPreview.loadAsset(glTFUrlOrGlbBlob);
 
 glTFPreview.startPreview();
 
@@ -58,4 +57,4 @@ glTFPreview.getSnapshot(300, 300).then((snapshotUrl) => {
 });
 ```
 
-See [options](./docs/modules.md) API documentation for more details.
+See [functions](./docs/classes/GlTFPreview.md) API documentation for more details.

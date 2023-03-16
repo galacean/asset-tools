@@ -16,7 +16,14 @@ export function transformGlTFtoGlB(jsonDoc: JSONDocument) {
   const jsonChunk = BufferUtils.concat([jsonChunkHeader, jsonChunkData]);
   header[header.length - 1] += jsonChunk.byteLength;
 
-  const binBuffer = Object.values(resources)[0];
+  let buffer: any = undefined;
+  const buffers = json.buffers;
+  if (buffers) buffer = buffers[0];
+
+  let binBuffer: any = undefined;
+
+  if (buffer) binBuffer = resources[buffer.uri];
+
   if (!binBuffer || !binBuffer.byteLength) {
     return BufferUtils.concat([BufferUtils.toView(header), jsonChunk]);
   }

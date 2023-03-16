@@ -1,16 +1,21 @@
 {
-	"compilerOptions": {
-		"target": "ESNext",
-		"module": "ESNext",
-		"lib": ["ESNext", "DOM"],
-		"moduleResolution": "Node",
-		"declarationDir": "types",
-		"declaration": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"resolveJsonModule": true,
-		"esModuleInterop": true,
-		"emitDeclarationOnly": true
-	},
-	"include": ["./src"]
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@oasis-engine/asset-tools": ["src"],
+      "@oasis-engine/asset-tools/*": ["src/*"]
+    },
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "declarationDir": "types",
+    "declaration": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["./src", "./example"]
 }

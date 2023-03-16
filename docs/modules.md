@@ -1,6 +1,6 @@
-[@alipay/antg-asset-tools](README.md) / Exports
+[@oasis-engine/asset-tools](README.md) / Exports
 
-# @alipay/antg-asset-tools
+# @oasis-engine/asset-tools
 
 ## Table of contents
 
@@ -34,4 +34,4 @@ Uint8Array representing glb
 
 #### Defined in
 
-gltf/transformer.ts:9
+[gltf/transformer.ts:9](https://github.com/ant-galaxy/antg-asset-tools/blob/21e8e01/src/gltf/transformer.ts#L9)
