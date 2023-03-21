@@ -14,7 +14,7 @@ import {
   Vector3,
   WebGLEngine
 } from "oasis-engine";
-import { OrbitControl } from "@oasis-engine-toolkit/controls";
+import { OrbitControl } from "./OrbitControl";
 
 const _tempCenterVec = new Vector3();
 const _tempExtVec = new Vector3();
@@ -83,13 +83,14 @@ export class GlTFPreview {
     this.canvas = canvas;
     canvas.style.width = "100%";
     canvas.style.height = "100%";
-    canvas.style.backgroundColor = "red";
-    this._engine = new WebGLEngine(canvas, { preserveDrawingBuffer: true });
+    this._engine = new WebGLEngine(canvas, { preserveDrawingBuffer: true, alpha: true });
     const scene = this._engine.sceneManager.activeScene;
+    scene.background.solidColor.set(0, 0, 0, 0);
     const cameraEntity = scene.createRootEntity();
     this._cameraEntity = cameraEntity;
     this._camera = cameraEntity.addComponent(Camera);
     this._controller = cameraEntity.addComponent(OrbitControl);
+    this._controller.addDefaultControl();
     const ambientLight = scene.ambientLight;
     ambientLight.diffuseSolidColor.set(1, 1, 1, 1);
     ambientLight.diffuseIntensity = 0.5;

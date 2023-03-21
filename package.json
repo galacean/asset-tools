@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2",
+  "version": "0.0.3",
   "name": "@oasis-engine/asset-tools",
   "description": "antg asset tools",
   "type": "module",
@@ -40,7 +40,6 @@
     "@gltf-transform/core": "^3.1.1",
     "@gltf-transform/extensions": "^3.1.1",
     "@gltf-transform/functions": "^3.1.1",
-    "@oasis-engine-toolkit/controls": "1.0.0-alpha.15",
     "@swc/helpers": "^0.4.14",
     "oasis-engine": "^0.9.0-beta.68",
     "typedoc": "^0.23.26",
