@@ -7,7 +7,7 @@
 Install:
 
 ```shell
-tnpm install --save @alipay/antg-asset-tools
+tnpm install --save @oasis-engine/asset-tools
 ```
 
 Use `oasis-engine` as an external library: https://gw.alipayobjects.com/os/lib/oasis-engine/0.9.0-beta.68/dist/browser.min.js

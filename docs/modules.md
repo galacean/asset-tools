@@ -16,7 +16,7 @@
 
 ### transformGlTFtoGlB
 
-▸ **transformGlTFtoGlB**(`jsonDoc`): `Uint8Array`
+▸ **transformGlTFtoGlB**(`jsonDoc`): `Blob`
 
 transform glTF to glB
 
@@ -28,10 +28,10 @@ transform glTF to glB
 
 #### Returns
 
-`Uint8Array`
+`Blob`
 
 Uint8Array representing glb
 
 #### Defined in
 
-[gltf/transformer.ts:9](https://github.com/ant-galaxy/antg-asset-tools/blob/21e8e01/src/gltf/transformer.ts#L9)
+[gltf/transformer.ts:38](https://github.com/ant-galaxy/antg-asset-tools/blob/5c0c7bc/src/gltf/transformer.ts#L38)
