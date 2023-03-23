@@ -4,7 +4,9 @@ import { transformGlTFtoGlB } from "@oasis-engine/asset-tools";
 const json = await fetch("/model/duck.gltf").then((res) => res.json());
 const resources: Record<string, Uint8Array> = {};
 
-const items = [...json.buffers, ...json.images];
+const images = json.images ?? [];
+const buffers = json.buffers ?? [];
+const items = [...buffers, ...images];
 
 await Promise.all(
   items.map(async (item) => {
@@ -14,7 +16,7 @@ await Promise.all(
   })
 );
 
-const glb = transformGlTFtoGlB({ json, resources });
+const glb = await transformGlTFtoGlB({ json, resources });
 
 const glbBlob = new Blob([glb], { type: "application/octet-stream" });
 
