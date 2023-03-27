@@ -1,5 +1,5 @@
 {
-  "version": "0.0.4",
+  "version": "0.0.5",
   "name": "@oasis-engine/asset-tools",
   "description": "antg asset tools",
   "type": "module",
@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "vite",
     "docs": "typedoc src/index.ts --plugin typedoc-plugin-markdown --excludePrivate --out ./docs",
-    "build": "rm -rf types && rm -rf dist && tsc && rollup -c"
+    "build": "rm -rf types && rm -rf dist && tsc -p tsconfig.typing.json && rollup -c"
   },
   "keywords": [
     "gltf",

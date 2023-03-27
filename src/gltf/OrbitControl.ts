@@ -1,4 +1,4 @@
-import { Camera, InputManager, Script, Transform, Vector3, MathUtil, Matrix, Entity, Vector2 } from "oasis-engine";
+import { Camera, Script, Transform, Vector3, MathUtil, Matrix, Entity, Vector2 } from "oasis-engine";
 // Prevent gimbal lock.
 const ESP = MathUtil.zeroTolerance;
 // Spherical.
@@ -211,8 +211,6 @@ export class OrbitControl extends Script {
 
   onAwake(): void {
     const { engine, entity } = this;
-    // @ts-ignore
-    this.input = engine.inputManager;
     this.camera = entity.getComponent(Camera);
     this.cameraTransform = entity.transform;
     this._spherical.setYAxis(this._up);
