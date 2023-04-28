@@ -1,6 +1,6 @@
-[@oasis-engine/asset-tools](README.md) / Exports
+[@galacean/asset-tools](README.md) / Exports
 
-# @oasis-engine/asset-tools
+# @galacean/asset-tools
 
 ## Table of contents
 
@@ -34,4 +34,4 @@ Uint8Array representing glb
 
 #### Defined in
 
-[gltf/transformer.ts:38](https://github.com/ant-galaxy/antg-asset-tools/blob/31a6344/src/gltf/transformer.ts#L38)
+[gltf/transformer.ts:38](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/transformer.ts#L38)

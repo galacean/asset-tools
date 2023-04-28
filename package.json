@@ -1,6 +1,6 @@
 {
-  "version": "0.0.5",
-  "name": "@oasis-engine/asset-tools",
+  "version": "0.0.1",
+  "name": "@galacean/asset-tools",
   "description": "antg asset tools",
   "type": "module",
   "main": "dist/main.js",
@@ -21,7 +21,7 @@
     "glb",
     "webgl",
     "webgl2",
-    "oasis-engine"
+    "@galacean/engine"
   ],
   "files": [
     "types",
@@ -41,7 +41,7 @@
     "@gltf-transform/extensions": "^3.1.1",
     "@gltf-transform/functions": "^3.1.1",
     "@swc/helpers": "^0.4.14",
-    "oasis-engine": "^0.9.0-beta.68",
+    "@galacean/engine": "^0.9.7",
     "typedoc": "^0.23.26",
     "typedoc-plugin-markdown": "^3.14.0"
   }

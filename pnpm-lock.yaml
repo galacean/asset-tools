@@ -1,14 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@galacean/engine': ^0.9.0-beta.68
   '@gltf-transform/core': ^3.1.1
   '@gltf-transform/extensions': ^3.1.1
   '@gltf-transform/functions': ^3.1.1
-  '@oasis-engine-toolkit/controls': 1.0.0-alpha.15
   '@rollup/plugin-node-resolve': ^15.0.1
   '@swc/core': ^1.3.35
   '@swc/helpers': ^0.4.14
-  oasis-engine: ^0.9.0-beta.68
   prettier: ^2.3.1
   rollup: ^3
   rollup-plugin-swc3: ^0.8.0
@@ -18,12 +17,11 @@ specifiers:
   vite: ^4
 
 dependencies:
+  '@galacean/engine': 0.9.7
   '@gltf-transform/core': 3.1.1
   '@gltf-transform/extensions': 3.1.1
   '@gltf-transform/functions': 3.1.1
-  '@oasis-engine-toolkit/controls': 1.0.0-alpha.15_oasis-engine@0.9.0-beta.68
   '@swc/helpers': 0.4.14
-  oasis-engine: 0.9.0-beta.68
   typedoc: 0.23.26_typescript@4.9.5
   typedoc-plugin-markdown: 3.14.0_typedoc@0.23.26
 
@@ -240,6 +238,47 @@ packages:
     resolution: {integrity: sha512-J8TOSBq3SoZbDhM9+R/u77hP93gz/rajSA+K2kGyijPpORPWUXHUpTaleoj+92As0S9uPRP7Oi8IqMf0u+ro6A==, tarball: '@fastify/deepmerge/download/@fastify/deepmerge-1.3.0.tgz'}
     dev: true
 
+  /@galacean/engine-core/0.9.7:
+    resolution: {integrity: sha512-k6AdJfhmkSq0skZGe+62YcL7zszHGtMVdNOLC8AcmdKUz64cGLdKhmx/nV//Jp3iLGQAjWdXBduZpDwHLQN3Mg==, tarball: '@galacean/engine-core/download/@galacean/engine-core-0.9.7.tgz'}
+    dependencies:
+      '@galacean/engine-math': 0.9.7
+    dev: false
+
+  /@galacean/engine-draco/0.9.7:
+    resolution: {integrity: sha512-oNfLIJ01nNRYFC7TwX7ZCOlg6ceYhjqW9bi397YoZwDOcUPy7gJalI3rAPFsNYwtGahRp+oolIe9dFGEcgCYJA==, tarball: '@galacean/engine-draco/download/@galacean/engine-draco-0.9.7.tgz'}
+    dependencies:
+      '@galacean/engine-core': 0.9.7
+    dev: false
+
+  /@galacean/engine-loader/0.9.7:
+    resolution: {integrity: sha512-qH3p6y94sWIbfmgT2CBcOJwTN027al4r/HUqQPt9iln8zwZzb8ACZe46g9m7uiSdd2vZSj9HfOqncG6VUFLDQw==, tarball: '@galacean/engine-loader/download/@galacean/engine-loader-0.9.7.tgz'}
+    dependencies:
+      '@galacean/engine-core': 0.9.7
+      '@galacean/engine-draco': 0.9.7
+      '@galacean/engine-math': 0.9.7
+      '@galacean/engine-rhi-webgl': 0.9.7
+    dev: false
+
+  /@galacean/engine-math/0.9.7:
+    resolution: {integrity: sha512-/ZkXrNHsXpx1R9QDtFSMHTUndg4srfU7d/TimxmBnrm9Mn7xrHIXn2FqqCzsxwuYQWB4oLQ4rgQx0U6b5BmcEA==, tarball: '@galacean/engine-math/download/@galacean/engine-math-0.9.7.tgz'}
+    dev: false
+
+  /@galacean/engine-rhi-webgl/0.9.7:
+    resolution: {integrity: sha512-DWFJEG2tohGdG0Fa/+11pOV2vDY7wjkl99MP9a7gc6nBSWGtbmtZQ0zDnLhQirkI5yS/Iie+g+2CKygSo0/l3w==, tarball: '@galacean/engine-rhi-webgl/download/@galacean/engine-rhi-webgl-0.9.7.tgz'}
+    dependencies:
+      '@galacean/engine-core': 0.9.7
+      '@galacean/engine-math': 0.9.7
+    dev: false
+
+  /@galacean/engine/0.9.7:
+    resolution: {integrity: sha512-80pP4KUb5oZplBHZNMVq/aVNUopj0tn+FefvUYxMyJeTq0gWq/YZ6eT4J5JyT5pAKXBZhgdnyW2t1Bf8MSUihA==, tarball: '@galacean/engine/download/@galacean/engine-0.9.7.tgz'}
+    dependencies:
+      '@galacean/engine-core': 0.9.7
+      '@galacean/engine-loader': 0.9.7
+      '@galacean/engine-math': 0.9.7
+      '@galacean/engine-rhi-webgl': 0.9.7
+    dev: false
+
   /@gltf-transform/core/3.1.1:
     resolution: {integrity: sha512-xybYoUVp7raneS5hmGQG3AYwQGRzmWEVH7FTEgBNGZzDyrZyT2obwEJh5yDqY52cb693QsSZx/emd9HmAzKwFQ==, tarball: '@gltf-transform/core/download/@gltf-transform/core-3.1.1.tgz'}
     dependencies:
@@ -262,46 +301,6 @@ packages:
       ndarray: 1.0.19
       ndarray-lanczos: 0.3.0
       ndarray-pixels: 2.0.1
-    dev: false
-
-  /@oasis-engine-toolkit/controls/1.0.0-alpha.15_oasis-engine@0.9.0-beta.68:
-    resolution: {integrity: sha512-tLZrqMlZVdWOoI1gMReqMwsYXV/QO+MIv+80cevPbA5cCnGR7otd3ZyJujsj3pO07+YCRWAtWwv3b9Npkjo4ng==, tarball: '@oasis-engine-toolkit/controls/download/@oasis-engine-toolkit/controls-1.0.0-alpha.15.tgz'}
-    peerDependencies:
-      oasis-engine: ^0.9.0-alpha
-    dependencies:
-      oasis-engine: 0.9.0-beta.68
-    dev: false
-
-  /@oasis-engine/core/0.9.0-beta.68:
-    resolution: {integrity: sha512-RmalOd4fgBrOCS7jEp9Q8jZ0UiJaozUIDxqV8dl1MNFKvcj4J/ZCUkP8kDlbRCgBoctU6OQ9diIg48BemsA2eQ==, tarball: '@oasis-engine/core/download/@oasis-engine/core-0.9.0-beta.68.tgz'}
-    dependencies:
-      '@oasis-engine/math': 0.9.0-beta.68
-    dev: false
-
-  /@oasis-engine/draco/0.9.0-beta.68:
-    resolution: {integrity: sha512-ZQqvoQ9ut3R3vqu+IYvhM9HzR/lgIYhJSo1SbumbioI5+WdcU9rCxH+suOlUbdbvFZPTUTUtQvZrBW1p+pUhPQ==, tarball: '@oasis-engine/draco/download/@oasis-engine/draco-0.9.0-beta.68.tgz'}
-    dependencies:
-      '@oasis-engine/core': 0.9.0-beta.68
-    dev: false
-
-  /@oasis-engine/loader/0.9.0-beta.68:
-    resolution: {integrity: sha512-B1bkuOKXqaSou+NhcD8Egvm/LqSeEfEP7R/stdNoU22TBdsl+yk1Q5zxBqvakcJHQ36rGu3rDQZxaYyTJnq5IA==, tarball: '@oasis-engine/loader/download/@oasis-engine/loader-0.9.0-beta.68.tgz'}
-    dependencies:
-      '@oasis-engine/core': 0.9.0-beta.68
-      '@oasis-engine/draco': 0.9.0-beta.68
-      '@oasis-engine/math': 0.9.0-beta.68
-      '@oasis-engine/rhi-webgl': 0.9.0-beta.68
-    dev: false
-
-  /@oasis-engine/math/0.9.0-beta.68:
-    resolution: {integrity: sha512-xaPLcpyZe3r0kXOpokY9yBuz6no3LxZi+yZyXxenmW56OdJqiS54YsfXm13WNltLUEOLsds6ouTq0GCk6PTlhw==, tarball: '@oasis-engine/math/download/@oasis-engine/math-0.9.0-beta.68.tgz'}
-    dev: false
-
-  /@oasis-engine/rhi-webgl/0.9.0-beta.68:
-    resolution: {integrity: sha512-1zvh6RBme4vk9QEJ50og8ULIbHDWO5ugsyrFQKShZA/UQLhehfSYcXXdGkbVqO3E5/wqvRzWS6r9eowXY24x1Q==, tarball: '@oasis-engine/rhi-webgl/download/@oasis-engine/rhi-webgl-0.9.0-beta.68.tgz'}
-    dependencies:
-      '@oasis-engine/core': 0.9.0-beta.68
-      '@oasis-engine/math': 0.9.0-beta.68
     dev: false
 
   /@rollup/plugin-node-resolve/15.0.1_rollup@3.17.2:
@@ -905,15 +904,6 @@ packages:
   /node-bitmap/0.0.1:
     resolution: {integrity: sha1-GA6scAPgxwdhjvMTaPYvhLKmkJE=, tarball: node-bitmap/download/node-bitmap-0.0.1.tgz}
     engines: {node: '>=v0.6.5'}
-    dev: false
-
-  /oasis-engine/0.9.0-beta.68:
-    resolution: {integrity: sha512-DURAmEGY574iOGJSYAHc8kYVK6+D2HUrwxQJ/f0JoasrxyRc3tj2zcaT4Djp2KCHX51bMNYWW27W8u2QxujH5w==, tarball: oasis-engine/download/oasis-engine-0.9.0-beta.68.tgz}
-    dependencies:
-      '@oasis-engine/core': 0.9.0-beta.68
-      '@oasis-engine/loader': 0.9.0-beta.68
-      '@oasis-engine/math': 0.9.0-beta.68
-      '@oasis-engine/rhi-webgl': 0.9.0-beta.68
     dev: false
 
   /oauth-sign/0.9.0:

@@ -22,7 +22,7 @@ export default [
   {
     input: "./src/index.ts",
     plugins,
-    external: ["oasis-engine"],
+    external: ["@galacean/engine"],
     output: [
       {
         file: "dist/module.esm.js",
@@ -32,9 +32,9 @@ export default [
         file: "dist/main.js",
         format: "umd",
         globals: {
-          "oasis-engine": "oasisEngine"
+          "@galacean/engine": "Galacean"
         },
-        name: "KTX2Encoder"
+        name: "Galacean.AssetProcessors"
       }
     ]
   }

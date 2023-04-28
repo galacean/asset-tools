@@ -13,7 +13,7 @@ import {
   Script,
   Vector3,
   WebGLEngine
-} from "oasis-engine";
+} from "@galacean/engine";
 import { OrbitControl } from "./OrbitControl";
 
 const _tempCenterVec = new Vector3();
@@ -169,7 +169,7 @@ export class GlTFPreview {
     this._frameTime = 0;
     this._duration = this.selectedClip.length;
     //@ts-ignore
-    // TODO: linked issue: https://github.com/oasis-engine/engine/issues/1134
+    // TODO: linked issue: https://github.com/galacean/engine/issues/1134
     this.selectedClip._sampleAnimation(this._entity, 0);
   }
 
@@ -180,7 +180,7 @@ export class GlTFPreview {
   setFrameTime(frameTime: number) {
     this._frameTime = frameTime;
     //@ts-ignore
-    // TODO: linked issue: https://github.com/oasis-engine/engine/issues/1134
+    // TODO: linked issue: https://github.com/galacean/engine/issues/1134
     this.selectedClip._sampleAnimation(this._entity, frameTime);
   }
 

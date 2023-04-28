@@ -1,4 +1,4 @@
-import { Camera, Script, Transform, Vector3, MathUtil, Matrix, Entity, Vector2 } from "oasis-engine";
+import { Camera, Script, Transform, Vector3, MathUtil, Matrix, Entity, Vector2 } from "@galacean/engine";
 // Prevent gimbal lock.
 const ESP = MathUtil.zeroTolerance;
 // Spherical.

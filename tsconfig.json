@@ -4,8 +4,8 @@
     "module": "ESNext",
     "baseUrl": ".",
     "paths": {
-      "@oasis-engine/asset-tools": ["src"],
-      "@oasis-engine/asset-tools/*": ["src/*"]
+      "@galacean/asset-tools": ["src"],
+      "@galacean/asset-tools/*": ["src/*"]
     },
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "Node",

@@ -1,4 +1,4 @@
-@oasis-engine/asset-tools / [Exports](modules.md)
+@galacean/asset-tools / [Exports](modules.md)
 
 # Antg Asset Tools
 
