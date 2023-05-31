@@ -9,13 +9,11 @@
     },
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "Node",
-    "declarationDir": "types",
     "declaration": true,
     "skipLibCheck": true,
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "emitDeclarationOnly": true
-  },
-  "include": ["./src", "./example"]
+    "emitDeclarationOnly": false
+  }
 }

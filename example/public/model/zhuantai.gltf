@@ -1,0 +1,215 @@
+{
+  "asset": {
+    "generator": "glTF-Transform v2.1.4",
+    "version": "2.0"
+  },
+  "accessors": [
+    {
+      "type": "SCALAR",
+      "componentType": 5123,
+      "count": 52308,
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "type": "SCALAR",
+      "componentType": 5123,
+      "count": 96,
+      "bufferView": 0,
+      "byteOffset": 104616
+    },
+    {
+      "type": "VEC3",
+      "componentType": 5122,
+      "count": 12676,
+      "max": [
+        32767,
+        21864,
+        32767
+      ],
+      "min": [
+        -32767,
+        -21864,
+        -32767
+      ],
+      "normalized": true,
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "type": "VEC3",
+      "componentType": 5122,
+      "count": 12676,
+      "normalized": true,
+      "bufferView": 1,
+      "byteOffset": 8
+    },
+    {
+      "type": "VEC4",
+      "componentType": 5122,
+      "count": 12676,
+      "normalized": true,
+      "bufferView": 1,
+      "byteOffset": 16
+    },
+    {
+      "type": "VEC2",
+      "componentType": 5123,
+      "count": 12676,
+      "normalized": true,
+      "bufferView": 1,
+      "byteOffset": 24
+    },
+    {
+      "type": "VEC2",
+      "componentType": 5123,
+      "count": 12676,
+      "normalized": true,
+      "bufferView": 1,
+      "byteOffset": 28
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 104808,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 104808,
+      "byteLength": 405632,
+      "byteStride": 32,
+      "target": 34962
+    }
+  ],
+  "samplers": [
+    {
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "textures": [
+    {
+      "source": 0,
+      "sampler": 0
+    },
+    {
+      "source": 1,
+      "sampler": 0
+    }
+  ],
+  "images": [
+    {
+      "name": "T_WF_ZhuanTai",
+      "mimeType": "image/webp",
+      "uri": "https://gw.alipayobjects.com/zos/H5App-BJ/1672562747778-zt-gltf/ZT_img0.webp"
+    },
+    {
+      "name": "T_WF_ZhuanTai01",
+      "mimeType": "image/webp",
+      "uri": "https://gw.alipayobjects.com/zos/H5App-BJ/1672562747778-zt-gltf/ZT_img1.webp"
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "https://gw.alipayobjects.com/os/H5App-BJ/1672562747778-zt-gltf/ZT_data.bin",
+      "byteLength": 510440
+    }
+  ],
+  "materials": [
+    {
+      "name": "T_WF_ZhuanTai",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      },
+      "extensions": {
+        "KHR_materials_unlit": {}
+      }
+    },
+    {
+      "name": "T_WF_ZhuanTai01",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        }
+      },
+      "extensions": {
+        "KHR_materials_unlit": {}
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "MS_WF_ZhuanTai",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 2,
+            "NORMAL": 3,
+            "TANGENT": 4,
+            "TEXCOORD_0": 5,
+            "TEXCOORD_1": 6
+          },
+          "mode": 4,
+          "material": 0,
+          "indices": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 2,
+            "NORMAL": 3,
+            "TANGENT": 4,
+            "TEXCOORD_0": 5,
+            "TEXCOORD_1": 6
+          },
+          "mode": 4,
+          "material": 1,
+          "indices": 1
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "MS_WF_ZhuanTai",
+      "translation": [
+        0,
+        1.0587313461583108,
+        0
+      ],
+      "rotation": [
+        0,
+        0.9999999999999991,
+        0,
+        4.371138999999988e-8
+      ],
+      "scale": [
+        1.5899126529693663,
+        1.5899126529693604,
+        1.5899126529693663
+      ],
+      "mesh": 0
+    }
+  ],
+  "scenes": [
+    {
+      "name": "scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "scene": 0,
+  "extensionsUsed": [
+    "KHR_materials_unlit",
+    "KHR_mesh_quantization"
+  ],
+  "extensionsRequired": [
+    "KHR_mesh_quantization"
+  ]
+}

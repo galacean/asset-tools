@@ -5,10 +5,10 @@
 Install:
 
 ```shell
-tnpm install --save @oasis-engine/asset-tools
+npm install --save @galacean/asset-tools
 ```
 
-Use `oasis-engine` as an external library: https://gw.alipayobjects.com/os/lib/oasis-engine/0.9.0-beta.68/dist/browser.min.js
+Use `@galacean/engine` as an external library: https://gw.alipayobjects.com/os/lib/galacean/engine/0.9.11/dist/browser.js
 
 Import:
 
@@ -56,3 +56,23 @@ glTFPreview.getSnapshot(300, 300).then((snapshotUrl) => {
 ```
 
 See [functions](./docs/classes/GlTFPreview.md) API documentation for more details.
+
+3. glTF parser and transformer
+
+**node.js 环境可用**
+
+```typescript
+import { Document, JSONDocument } from '@gltf-transform/core';
+import { parse, textureTransform } from '@galacean/asset-tools/node';
+
+const document: Document = await parse('./your_gltf.gltf', 'document');
+
+const jsonData: JSONDocument = await parse('./your_gltf.gltf', 'json');
+
+// 优化 glTF 里用到的纹理图片
+textureTransform(document, {
+  resize: 512,
+  format: 'webp',
+});
+
+```
