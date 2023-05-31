@@ -63,7 +63,7 @@ See [functions](./docs/classes/GlTFPreview.md) API documentation for more detail
 
 ```typescript
 import { Document, JSONDocument } from '@gltf-transform/core';
-import { parse, textureTransform } from '@galacean/asset-tools';
+import { parse, textureTransform } from '@galacean/asset-tools/node';
 
 const document: Document = await parse('./your_gltf.gltf', 'document');
 
