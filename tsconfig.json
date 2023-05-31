@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "ES6",
     "baseUrl": ".",
     "paths": {
       "@galacean/asset-tools": ["src"],
@@ -9,13 +9,11 @@
     },
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "Node",
-    "declarationDir": "types",
     "declaration": true,
     "skipLibCheck": true,
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "emitDeclarationOnly": true
-  },
-  "include": ["./src", "./example"]
+    "emitDeclarationOnly": false
+  }
 }

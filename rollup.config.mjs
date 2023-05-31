@@ -15,7 +15,7 @@ const plugins = [
       sourceMaps: true
     })
   ),
-  minify()
+  // minify()
 ];
 
 export default [
