@@ -24,7 +24,7 @@ export type ImageTransformOptions = {
  * 
  * @returns 
  */
-export function transformImageByUrl(imageUrl: string, options: ImageTransformOptions): string {
+export function transformImageByAftsUrl(imageUrl: string, options: ImageTransformOptions): string {
   if (!imageUrl) {
     throw new Error('imageUrl is required');
   }

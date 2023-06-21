@@ -79,12 +79,12 @@ GltfTools.textureTransform(document, {
 
 #### 4. image transformer
 
-##### 4.1 transformImageByUrl
+##### 4.1 transformImageByAftsUrl
 
 通过 afts 参数，实现图片的缩放、裁剪、格式转换、压缩等功能。
 
 ```typescript
-import { transformImageByUrl } from '@galacean/asset-tools';
+import { transformImageByAftsUrl } from '@galacean/asset-tools';
 
 const Imgs = [
   'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ',
@@ -95,7 +95,7 @@ const Imgs = [
   'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ/200w_200h.ccc.web',
 ];
 
-const resultImgs = Imgs.map((img) => transformImageByUrl(img, { width: 100, height: 100, quality: 80, mode: 'contain' }));
+const resultImgs = Imgs.map((img) => transformImageByAftsUrl(img, { width: 100, height: 100, quality: 80, mode: 'contain' }));
 
 console.log('结果：', resultImgs);
 console.log('一致：', Array.from(new Set(resultImgs)).length === 1 ? 'success' : 'fail')

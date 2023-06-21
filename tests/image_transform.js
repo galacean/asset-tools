@@ -1,4 +1,4 @@
-import { transformImageByUrl } from '../dist/module.esm.js';
+import { transformImageByAftsUrl } from '../dist/module.esm.js';
 
 const Imgs = [
   'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ',
@@ -9,7 +9,7 @@ const Imgs = [
   'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ/200w_200h.ccc.web',
 ];
 
-const resultImgs = Imgs.map((img) => transformImageByUrl(img, { width: 100, height: 100, quality: 80, mode: 'contain' }));
+const resultImgs = Imgs.map((img) => transformImageByAftsUrl(img, { width: 100, height: 100, quality: 80, mode: 'contain' }));
 
 // 以上图片转换结果应该都一样
 console.log(resultImgs);
