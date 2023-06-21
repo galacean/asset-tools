@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Install:
+### Install:
 
 ```shell
 npm install --save @galacean/asset-tools
@@ -10,15 +10,15 @@ npm install --save @galacean/asset-tools
 
 Use `@galacean/engine` as an external library: https://gw.alipayobjects.com/os/lib/galacean/engine/0.9.11/dist/browser.js
 
-Import:
+### Import:
 
 ```javascript
 import { transformGlTFtoGlB, GlTFViewer } from '@alipay/antg-asset-tools';
 ```
 
-Usage:
+### Usage:
 
-1. transform glTF to glB
+#### 1. transform glTF to glB
 
 ```javascript
 const json = await fetch("/model/duck.gltf").then((res) => res.json());
@@ -37,7 +37,7 @@ await Promise.all(
 const glb = transformGlTFtoGlB({ json, resources });
 ```
 
-2. glTF viewer
+#### 2. glTF viewer
 
 ```javascript
 const glTFPreview = GlTFPreview.getInstance();
@@ -57,22 +57,46 @@ glTFPreview.getSnapshot(300, 300).then((snapshotUrl) => {
 
 See [functions](./docs/classes/GlTFPreview.md) API documentation for more details.
 
-3. glTF parser and transformer
+#### 3. gltf/glb parser and transformer
 
-**node.js 环境可用**
+> NOTE: 仅 node.js 环境可用
 
 ```typescript
 import { Document, JSONDocument } from '@gltf-transform/core';
-import { parse, textureTransform } from '@galacean/asset-tools/node';
+import { GltfTools } from '@galacean/asset-tools/node';
 
-const document: Document = await parse('./your_gltf.gltf', 'document');
+const document: Document = await GltfTools.parse('./your_gltf.gltf', 'document');
 
-const jsonData: JSONDocument = await parse('./your_gltf.gltf', 'json');
+const jsonData: JSONDocument = await GltfTools.parse('./your_gltf.gltf', 'json');
 
 // 优化 glTF 里用到的纹理图片
-textureTransform(document, {
+GltfTools.textureTransform(document, {
   resize: 512,
   format: 'webp',
 });
 
+```
+
+#### 4. image transformer
+
+##### 4.1 transformImageByUrl
+
+通过 afts 参数，实现图片的缩放、裁剪、格式转换、压缩等功能。
+
+```typescript
+import { transformImageByUrl } from '@galacean/asset-tools';
+
+const Imgs = [
+  'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ',
+  'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ/aaa/bbb/ccc.png',
+  'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ/original',
+  'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ/200w_200h',
+  'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ/200w_200h.web',
+  'https://mdn.alipayobjects.com/huamei_p0cigc/afts/img/A*Lq5LS7PWLkEAAAAAAAAAAAAADoB5AQ/200w_200h.ccc.web',
+];
+
+const resultImgs = Imgs.map((img) => transformImageByUrl(img, { width: 100, height: 100, quality: 80, mode: 'contain' }));
+
+console.log('结果：', resultImgs);
+console.log('一致：', Array.from(new Set(resultImgs)).length === 1 ? 'success' : 'fail')
 ```
