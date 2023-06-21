@@ -101,6 +101,9 @@ export function transformImageByAftsUrl(imageUrl: string, options: ImageTransfor
       /(.+\/)([\w.]+)(@[\w-]+)?(\?.*)?/g,
       `$1$2@${aftsParamsStr}$4`,
     );
+  } else {
+    console.warn('不支持的图片 url', imageUrl);
   }
+
   return _url;
 }
