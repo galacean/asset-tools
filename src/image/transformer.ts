@@ -1,13 +1,11 @@
 /**
  * 图片转换
  */
-import sharp from 'sharp';
-
 export type ImageTransformOptions = {
   format?: 'webp' | 'jpeg' | 'png',
   width?: number,
   height?: number,
-  mode?: 'cover' | 'contain' | 'fill',
+  mode?: 'cover' | 'contain' | 'fill' | 'inside',
   quality?: number,
 }
 
@@ -16,11 +14,11 @@ export type ImageTransformOptions = {
  * 通过 afts url 参数实现
  * @param imageUrl 图片 url
  * @param options
- * @param options.format 图片格式
  * @param options.width 图片宽度
  * @param options.height 图片高度
- * @param options.scale 图片缩放比例
  * @param options.mode 图片缩放填充模式，cover: 裁剪，contain: 等比填充，fill: 拉伸填充
+ * @param options.format 图片格式
+ * @param options.quality 图片质量
  * 
  * @returns 
  */
