@@ -1,2 +1,2 @@
-export * from './parser';
-export * from './transformer';
+export * as GltfTools from './gltf/index.js';
+export * as ImageTools from './image/index.js';
