@@ -38,7 +38,7 @@ Get the current canvas element.
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:35](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L35)
+[gltf/GlTFPreview.ts:35](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L35)
 
 ## Accessors
 
@@ -54,7 +54,7 @@ Get the current animation names.
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:40](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L40)
+[gltf/GlTFPreview.ts:40](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L40)
 
 ___
 
@@ -70,7 +70,7 @@ Get the current duration.
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:47](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L47)
+[gltf/GlTFPreview.ts:47](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L47)
 
 ___
 
@@ -86,7 +86,7 @@ Get the current frame time.
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:54](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L54)
+[gltf/GlTFPreview.ts:54](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L54)
 
 ___
 
@@ -102,7 +102,7 @@ Get the current playing state.
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:61](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L61)
+[gltf/GlTFPreview.ts:61](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L61)
 
 ## Methods
 
@@ -118,7 +118,7 @@ Destroy glTF preview
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:208](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L208)
+[gltf/GlTFPreview.ts:208](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L208)
 
 ___
 
@@ -143,7 +143,7 @@ Get snapshot of the glTF
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:219](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L219)
+[gltf/GlTFPreview.ts:219](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L219)
 
 ___
 
@@ -167,7 +167,7 @@ async promise
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:113](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L113)
+[gltf/GlTFPreview.ts:113](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L113)
 
 ___
 
@@ -183,7 +183,7 @@ Pause animation
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:201](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L201)
+[gltf/GlTFPreview.ts:201](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L201)
 
 ___
 
@@ -199,7 +199,7 @@ Play animation
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:191](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L191)
+[gltf/GlTFPreview.ts:191](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L191)
 
 ___
 
@@ -221,7 +221,7 @@ Select animation
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:167](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L167)
+[gltf/GlTFPreview.ts:167](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L167)
 
 ___
 
@@ -243,7 +243,7 @@ Set frame time
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:180](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L180)
+[gltf/GlTFPreview.ts:180](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L180)
 
 ___
 
@@ -259,7 +259,7 @@ Start preview glTF asset
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:132](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L132)
+[gltf/GlTFPreview.ts:132](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L132)
 
 ___
 
@@ -275,7 +275,7 @@ Stop preview glTF asset
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:155](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L155)
+[gltf/GlTFPreview.ts:155](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L155)
 
 ___
 
@@ -289,4 +289,4 @@ ___
 
 #### Defined in
 
-[gltf/GlTFPreview.ts:25](https://github.com/ant-galaxy/antg-asset-tools/blob/ba75335/src/gltf/GlTFPreview.ts#L25)
+[gltf/GlTFPreview.ts:25](https://github.com/ant-galaxy/antg-asset-tools/blob/b12745a/src/gltf/GlTFPreview.ts#L25)
