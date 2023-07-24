@@ -1,5 +1,5 @@
 {
-  "version": "0.0.3",
+  "version": "0.0.4",
   "name": "@galacean/asset-tools",
   "description": "antg asset tools",
   "type": "module",
@@ -60,7 +60,7 @@
     "@swc/helpers": "^0.5.1",
     "fs-extra": "^11.1.1",
     "node-fetch": "^3.3.1",
-    "sharp": "^0.32.1"
+    "sharp": "0.32.2"
   },
   "peerDependencies": {
     "@galacean/engine": "^0.9.11"
