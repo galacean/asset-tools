@@ -1,0 +1,1 @@
+export const gltf1 = 'https://gw.alipayobjects.com/os/H5App-BJ/1640334069506-gltf/scene.gltf';

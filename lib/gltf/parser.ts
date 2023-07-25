@@ -1,5 +1,5 @@
 import { NodeIO, Document, JSONDocument } from '@gltf-transform/core';
-import { KHRMaterialsUnlit, KHRMeshQuantization } from '@gltf-transform/extensions';
+import { KHRMaterialsUnlit, KHRMeshQuantization, KHRLightsPunctual } from '@gltf-transform/extensions';
 import fetch from 'node-fetch';
 
 /**
@@ -13,7 +13,7 @@ export const getIOinstance = (function () {
     if (!instance) {
       instance = new NodeIO(fetch, {});
       instance.setAllowHTTP(true);
-      instance.registerExtensions(options.extensions || [KHRMaterialsUnlit, KHRMeshQuantization]);
+      instance.registerExtensions(options.extensions || [KHRLightsPunctual, KHRMaterialsUnlit, KHRMeshQuantization]);
     }
     return instance;
   };

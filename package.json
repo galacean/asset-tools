@@ -26,7 +26,7 @@
   "scripts": {
     "dev": "vite && tsc -p tsconfig.lib.json -w",
     "docs": "typedoc src/index.ts --plugin typedoc-plugin-markdown --excludePrivate --out ./docs",
-    "build": "rm -rf types dist && tsc -p tsconfig.lib.json && tsc -p tsconfig.typing.json && rollup -c"
+    "build": "rm -rf types dist && tsc -p tsconfig.lib.json && cp ./lib/global.d.ts ./dist/lib/ && tsc -p tsconfig.typing.json && rollup -c"
   },
   "keywords": [
     "gltf",
@@ -59,6 +59,7 @@
     "@gltf-transform/functions": "^3.1.1",
     "@swc/helpers": "^0.5.1",
     "fs-extra": "^11.1.1",
+    "gltf-validator": "^2.0.0-dev.3.9",
     "node-fetch": "^3.3.1",
     "sharp": "0.32.2"
   },

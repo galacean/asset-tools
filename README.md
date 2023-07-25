@@ -74,12 +74,87 @@ GltfTools.textureTransform(document, {
   resize: 512,
   format: 'webp',
 });
-
 ```
 
-#### 4. image transformer
+#### 4. gltf pbr to unlint
 
-##### 4.1 transformImageByAftsUrl
+> NOTE: 仅 node.js 环境可用
+
+将 gltf pbr 材质转换成 unlint 材质
+
+```typescript
+import path from 'path';
+import { GltfTools } from '@galacean/asset-tools/node';
+
+const url = 'https://gw.alipayobjects.com/os/H5App-BJ/1640334069506-gltf/scene.gltf';
+
+
+async function main(source) {
+  const doc = await GltfTools.pbr2unlit(source);
+}
+
+main(url);
+```
+
+#### 5. gltf validator
+
+> NOTE: 仅 node.js 环境可用
+
+gltf 内部检测，具体请查看：https://github.com/KhronosGroup/glTF-Validator
+
+```typescript
+import path from 'path';
+import { GltfTools } from '@galacean/asset-tools/node';
+
+const url = 'https://gw.alipayobjects.com/os/H5App-BJ/1640334069506-gltf/scene.gltf';
+
+
+async function main(source) {
+  const report = await GltfTools.validate(source);
+}
+
+main(url);
+
+// 检测结果：
+/*
+type ValidationReport = {
+	mimeType: string;
+	validatorVersion: string;
+	validatedAt: string;
+	issues: {
+	  numErrors: number;
+	  numWarnings: number;
+	  numInfos: number;
+	  numHints: number;
+	  messages: any[];
+	  truncated: boolean;
+	};
+	info: {
+	  version: string;
+	  generator: string;
+	  extensionsUsed: string[];
+	  resources: any[];
+	  animationCount: number;
+	  materialCount: number;
+	  hasMorphTargets: boolean;
+	  hasSkins: boolean;
+	  hasTextures: boolean;
+	  hasDefaultScene: boolean;
+	  drawCallCount: number;
+	  totalVertexCount: number;
+	  totalTriangleCount: number;
+	  maxUVs: number;
+	  maxInfluences: number;
+	  maxAttributes: number;
+	};
+}; 
+ */
+```
+
+
+#### 6. image transformer
+
+##### 6.1 transformImageByAftsUrl
 
 通过 afts 参数，实现图片的缩放、裁剪、格式转换、压缩等功能。
 
