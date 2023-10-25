@@ -1,3 +1,4 @@
+import path from "path";
 import resolve from "@rollup/plugin-node-resolve";
 import { swc, defineRollupSwcOption, minify } from "rollup-plugin-swc3";
 
@@ -10,7 +11,8 @@ const plugins = [
       jsc: {
         loose: true,
         externalHelpers: true,
-        target: "es5"
+        target: "es5",
+        baseUrl: path.resolve('./'),
       },
       sourceMaps: true
     })

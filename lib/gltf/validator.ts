@@ -1,9 +1,9 @@
+import path from 'path';
 import fse from 'fs-extra';
 import fetch from 'node-fetch';
 import validator, { type ValidationOptions, type ValidationReport } from 'gltf-validator';
 import { Document } from '@gltf-transform/core';
-import { getIOinstance, parse } from './parser.js';
-import path from 'path';
+import { getIOinstance } from './parser.js';
 
 /**
  * 读取文件
@@ -34,7 +34,7 @@ export async function validate(gltf: string | Uint8Array | Document, options?: V
     if (gltf.startsWith('http')) {
       const jsonObj = await fetch(gltf).then(data => data.json());
       report = await validator.validateString(JSON.stringify(jsonObj), options);
-    } if ( gltf.startsWith('{') || gltf.startsWith('[') ) {
+    } else if ( gltf.startsWith('{') || gltf.startsWith('[') ) {
       report = await validator.validateString(gltf, options);
     } else {
       const jsonObj = fse.readJsonSync(gltf, 'utf-8');
