@@ -1,5 +1,5 @@
 {
-  "version": "0.0.7",
+  "version": "0.0.8",
   "name": "@galacean/asset-tools",
   "description": "antg asset tools",
   "type": "module",
@@ -26,7 +26,7 @@
   "scripts": {
     "dev": "vite && tsc -p tsconfig.lib.json -w",
     "docs": "typedoc src/index.ts --plugin typedoc-plugin-markdown --excludePrivate --out ./docs",
-    "build": "rm -rf types dist && tsc -p tsconfig.lib.json && cp ./lib/global.d.ts ./dist/lib/ && tsc -p tsconfig.typing.json && rollup -c"
+    "build": "rm -rf types dist && tsc -p tsconfig.lib.json && tsc -p tsconfig.typing.json && rollup -c"
   },
   "keywords": [
     "gltf",
