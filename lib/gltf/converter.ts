@@ -1,7 +1,7 @@
 import { Document, FileUtils, uuid } from "@gltf-transform/core";
 import { KHRMaterialsUnlit } from "@gltf-transform/extensions";
 import { getIOinstance, parse } from './parser.js';
-import { validate } from './validator.js';
+import { validate } from './analysis.js';
 
 /**
  * 移除未使用的图片

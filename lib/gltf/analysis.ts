@@ -1,7 +1,8 @@
 import path from 'path';
 import fse from 'fs-extra';
 import fetch from 'node-fetch';
-import validator, { type ValidationOptions, type ValidationReport } from 'gltf-validator';
+import * as validator from './validator.js';
+import type { ValidationOptions, ValidationReport } from './validator.js';
 import { Document } from '@gltf-transform/core';
 import { getIOinstance } from './parser.js';
 

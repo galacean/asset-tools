@@ -12,16 +12,19 @@ import sharp from "sharp";
 export async function textureTransform(
   document: Document,
   options: {
-    resize: 256 | 512 | 1024 | 2048, format: 'webp' | 'jpeg' | 'png',
+    resize: 256 | 512 | 1024 | 2048,
+    format: 'webp' | 'jpeg' | 'png',
+    quality?: number,
   }
 ) {
-  const { resize = 512, format = 'webp' } = options || {};
+  const { resize = 512, format = 'webp', quality } = options || {};
   await document.transform(
     // Convert textures to WebP (Requires glTF Transform v3 and Node.js).
     textureCompress({
       encoder: sharp,
       targetFormat: format,
       resize: [resize, resize],
+      quality
     }),
   );
 

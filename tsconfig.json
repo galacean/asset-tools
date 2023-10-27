@@ -11,6 +11,8 @@
     "moduleResolution": "Node",
     "declaration": true,
     "skipLibCheck": true,
+    "allowJs": true,
+    "checkJs": false,
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
