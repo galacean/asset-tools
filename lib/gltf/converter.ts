@@ -98,8 +98,10 @@ export async function pbr2unlit(gltf: string | Document, options?: { IOExtension
     material.setExtension('KHR_materials_unlit', unlit);
     // 4. Remove the PBRMetallicRoughness property.
     material.setMetallicRoughnessTexture(null);
-    material.setMetallicFactor(0);
-    material.setRoughnessFactor(0);
+    // @ts-ignore
+    material.setMetallicFactor(undefined); // remove metallicFactor
+    // @ts-ignore
+    material.setRoughnessFactor(undefined); // remove roughnessFactor
     // 5. Remove the NormalTexture property.
     material.setNormalTexture(null);
     // 6. Remove the OcclusionTexture property.
